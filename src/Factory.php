@@ -8,7 +8,11 @@ use OpenPaySDK\Kernel\Support\Str;
  * Created by PhpStorm.
  * User: lmh <lmh@weiyian.com>
  * Date: 2020/10/27
- * Time: 下午5:15
+ * @method static \OpenPaySDK\Payment\Application            payment(array $config)
+ * @method static \OpenPaySDK\Account\Application        account(array $config)
+ * @method static \OpenPaySDK\Merchant\Application       merchant(array $config)
+ * @method static \OpenPaySDK\Reconciliation\Application    reconciliation(array $config)
+ * @method static \OpenPaySDK\Wechat\Application       wechat(array $config)
  */
 class Factory
 {
