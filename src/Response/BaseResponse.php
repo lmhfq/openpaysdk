@@ -15,6 +15,14 @@ use ReflectionProperty;
 class BaseResponse
 {
     /**
+     * @var string 商家外部唯一ID
+     */
+    public $externalId;
+    /**
+     * @var string 签名
+     */
+    public $sign;
+    /**
      * @var bool
      */
     public $success = false;
@@ -33,6 +41,7 @@ class BaseResponse
 
     /**
      * @param $values
+     * @throws \ReflectionException
      */
     public function setAttributes($values)
     {

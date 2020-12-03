@@ -3,11 +3,6 @@ declare(strict_types=1);
 
 namespace Lmh\OpenPaySDK\Request;
 
-use yii\base\Arrayable;
-use yii\helpers\ArrayHelper;
-use yii\web\Link;
-use yii\web\Linkable;
-
 /**
  * Created by PhpStorm.
  * User: lmh <lmh@weiyian.com>
@@ -21,6 +16,10 @@ class BaseRequest
      * @var string 商家外部唯一ID
      */
     public $externalId;
+    /**
+     * @var int 商家入驻后返回的商户ID（支付平台的商户ID）
+     */
+    public $merchantId;
     /**
      * @var string 接口名称
      */
