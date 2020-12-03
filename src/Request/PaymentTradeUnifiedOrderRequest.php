@@ -53,7 +53,7 @@ class PaymentTradeUnifiedOrderRequest extends BaseRequest
     /**
      * @var string 附加数据
      */
-    public $attach = '';
+    public $attach;
     /**
      * @var string 通知商户服务器地址
      */

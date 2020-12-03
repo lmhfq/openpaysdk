@@ -69,6 +69,7 @@ class Client
      * @param BaseResponse $response
      * @return BaseResponse
      * @throws GuzzleException
+     * @throws \ReflectionException
      */
     public function execute(BaseRequest $request, BaseResponse $response): BaseResponse
     {
