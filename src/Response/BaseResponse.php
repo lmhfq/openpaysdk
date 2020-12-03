@@ -2,6 +2,10 @@
 declare(strict_types=1);
 
 namespace Lmh\OpenPaySDK\Response;
+
+use ReflectionClass;
+use ReflectionProperty;
+
 /**
  * Created by PhpStorm.
  * User: lmh <lmh@weiyian.com>
@@ -26,4 +30,35 @@ class BaseResponse
      * @var array
      */
     public $data = [];
+
+    /**
+     * @param $values
+     */
+    public function setAttributes($values)
+    {
+        if (is_array($values)) {
+            $attributes = array_flip($this->attributes());
+            foreach ($values as $name => $value) {
+                if (isset($attributes[$name])) {
+                    $this->$name = $value;
+                }
+            }
+        }
+    }
+
+    /**
+     * @return array
+     * @throws \ReflectionException
+     */
+    public function attributes()
+    {
+        $class = new ReflectionClass($this);
+        $names = [];
+        foreach ($class->getProperties(ReflectionProperty::IS_PUBLIC) as $property) {
+            if (!$property->isStatic()) {
+                $names[] = $property->getName();
+            }
+        }
+        return $names;
+    }
 }

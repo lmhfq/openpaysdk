@@ -66,10 +66,11 @@ class Client
 
     /**
      * @param BaseRequest $request
-     * @return array|mixed
+     * @param BaseResponse $response
+     * @return BaseResponse
      * @throws GuzzleException
      */
-    public function execute(BaseRequest $request): BaseResponse
+    public function execute(BaseRequest $request, BaseResponse $response): BaseResponse
     {
         $sysParams["appId"] = $this->appId;
         $sysParams["version"] = $this->version;
@@ -79,8 +80,8 @@ class Client
         $sysParams["nonce"] = Random::generate(16);;
 
         $apiParams = $request->getApiParams();
-
         $params = array_merge($sysParams, $apiParams);
+
         $querySigner = new Signer();
         $params['sign'] = $querySigner->sign($params, $this->appSecret);
         $options = [
@@ -88,16 +89,14 @@ class Client
         ];
         $requestClient = new Request();
         $requestClient->baseUri = $this->gatewayUrl;
-
-        $baseResponse = new BaseResponse();
-        $response = $requestClient->request('', "POST", $options);
-        if ($response && is_string($response)) {
-            $result = json_decode($response, true);
-            $baseResponse->data = $result['data'] ?? [];
-            $baseResponse->resultCode = $result['resultCode'] ?? [];
-            $baseResponse->resultMessage = $result['resultMessage'] ?? [];
-            $baseResponse->success = $result['success'];
+        $result = $requestClient->request('', "POST", $options);
+        if ($result && is_string($result)) {
+            $attributes = json_decode($result, true);
+            if (isset($attributes['data'])) {
+                $attributes = array_merge($attributes, $attributes['data']);
+            }
+            $response->setAttributes($attributes);
         }
-        return $baseResponse;
+        return $response;
     }
 }
