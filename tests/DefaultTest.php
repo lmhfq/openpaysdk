@@ -66,9 +66,6 @@ class DefaultTest extends TestCase
 //        $paymentProductListRequest = new MerchantChannelListRequest();
 //        $paymentProductListRequest->externalId = "1698";
         $result = $client->execute($paymentProductListRequest,new PaymentTradeUnifiedOrderResponse());
-        $certStore = file_get_contents('/vagrant/gssy.pfx');
 
-        openssl_pkcs12_read($certStore,$p12cert, 'wya07281101');
-        echo ($p12cert['pkey']);
     }
 }
