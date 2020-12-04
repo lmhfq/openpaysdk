@@ -24,10 +24,6 @@ class AccountMerchantQueryResponse extends BaseResponse
     /**
      * @var  string
      */
-    public $externalId;
-    /**
-     * @var  string
-     */
     public $productCode;
     /**
      * @var array

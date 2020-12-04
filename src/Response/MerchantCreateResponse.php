@@ -17,10 +17,6 @@ class MerchantCreateResponse extends BaseResponse
      */
     public $merchantId;
     /**
-     * @var string
-     */
-    public $externalId;
-    /**
      * @var int 1：个人  2 企业
      */
     public $merchantNature;

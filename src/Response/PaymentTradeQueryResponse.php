@@ -12,5 +12,4 @@ namespace Lmh\OpenPaySDK\Response;
 
 class PaymentTradeQueryResponse extends BaseResponse
 {
-
 }

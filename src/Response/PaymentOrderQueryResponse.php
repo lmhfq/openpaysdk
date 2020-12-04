@@ -10,10 +10,6 @@ class PaymentOrderQueryResponse extends BaseResponse
      */
     public $merchantId;
     /**
-     * @var string 卖家唯一标示 商家入驻时的唯一ID
-     */
-    public $externalId;
-    /**
      * @var string 商户订单号
      */
     public $outTradeNo;
