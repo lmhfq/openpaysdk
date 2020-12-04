@@ -26,6 +26,9 @@ class Request
      * @var string
      */
     public $baseUri = '';
+
+
+    protected $config = [];
     /**
      * @var array
      */
@@ -34,6 +37,20 @@ class Request
             CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
         ],
     ];
+
+    /**
+     * Request constructor.
+     * @param array $config
+     */
+    public function __construct(array $config = [])
+    {
+        $defaultConfig = [
+            'headers' => [
+                'content-type' => 'application/json'
+            ],
+        ];
+        $this->config = array_merge($defaultConfig, $config);
+    }
 
     /**
      * @param string $url
@@ -76,15 +93,7 @@ class Request
      */
     public function getHttpClient(): ClientInterface
     {
-        $this->httpClient = new Client([
-            'headers' => [
-                'content-type' => 'application/json'
-            ],
-            // Base URI is used with relative requests
-            'base_uri' => $this->baseUri,
-            // You can set any number of default request options.
-            'timeout' => 2.0,
-        ]);
+        $this->httpClient = new Client($this->config);
         return $this->httpClient;
     }
 }

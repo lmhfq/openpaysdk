@@ -45,6 +45,10 @@ class Client
      */
     public $sandbox;
     /**
+     * @var int
+     */
+    public $timeout = 30;
+    /**
      * @var array
      * @see 参考 https://docs.guzzlephp.org/en/stable/request-options.html#proxy
      * 'proxy' => [
@@ -54,6 +58,10 @@ class Client
      * ]
      */
     protected $options = [];
+    /**
+     * @var string
+     */
+    public $requestBody;
 
     /**
      * Client constructor.
@@ -88,18 +96,22 @@ class Client
         $sysParams["format"] = $this->format;
         $sysParams["signType"] = $this->signType;
         $sysParams["method"] = $request->getMethod();
-        $sysParams["nonce"] = Random::generate(16);;
+        $sysParams["nonce"] = Random::generate(16);
 
         $apiParams = $request->getApiParams();
         $params = array_merge($sysParams, $apiParams);
 
-        $querySigner = new Signer();
-        $params['sign'] = $querySigner->sign($params, $this->appSecret);
+        $params['sign'] = (new Signer())->sign($params, $this->appSecret);
+
+        $this->requestBody = json_encode($params);
         $options = array_merge($this->options, [
-            'body' => json_encode($params),
+            'body' => $this->requestBody,
         ]);
-        $requestClient = new Request();
-        $requestClient->baseUri = $this->gatewayUrl;
+
+        $requestClient = new Request([
+            'base_uri' => $this->gatewayUrl,
+            'timeout' => $this->timeout,
+        ]);
         $result = $requestClient->request('', "POST", $options);
         if ($result && is_string($result)) {
             $attributes = json_decode($result, true);
