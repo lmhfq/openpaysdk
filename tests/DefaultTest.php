@@ -20,7 +20,12 @@ class DefaultTest extends TestCase
 
     public function testAccountInfo()
     {
-        $client = new Client();
+        $client = new Client([
+            'proxy' => [
+                'http' => 'tcp://localhost:8125', // Use this proxy with "http"
+                'https' => 'tcp://localhost:9124', // Use this proxy with "https",
+            ]
+        ]);
         $client->appId = '174008574995857408';
         $client->appSecret = 'GcnQ7rtAg#O:]-Ea3u6>t16}oQ(Ms\mS';
 
