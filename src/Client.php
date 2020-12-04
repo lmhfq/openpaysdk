@@ -20,6 +20,7 @@ class Client
      * @var string 网关
      */
     public $gatewayUrl = "http://payment.xls.com/gateway";
+
     /**
      * @var string
      */
@@ -35,7 +36,7 @@ class Client
     /**
      * @var string api版本
      */
-    protected $version = '1.0';
+    public $version = '1.0';
     /**
      * @var string 签名类型
      */
@@ -57,11 +58,19 @@ class Client
      * 'no' => ['.mit.edu', 'foo.com']    // Don't use a proxy with these
      * ]
      */
-    protected $options = [];
+    private $options = [];
     /**
      * @var string
      */
-    public $requestBody;
+    private $requestBody;
+
+    /**
+     * @return string
+     */
+    public function getRequestBody(): string
+    {
+        return $this->requestBody;
+    }
 
     /**
      * Client constructor.

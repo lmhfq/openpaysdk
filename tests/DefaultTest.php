@@ -28,6 +28,7 @@ class DefaultTest extends TestCase
         ]);
         $client->appId = '174008574995857408';
         $client->appSecret = 'GcnQ7rtAg#O:]-Ea3u6>t16}oQ(Ms\mS';
+        $client->timeout = 30;
 
         $paymentProductListRequest = new PaymentTradeUnifiedOrderRequest();
         $paymentProductListRequest->externalId = "1698";
