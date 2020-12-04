@@ -46,9 +46,7 @@ class Request
     {
         $method = strtoupper($method);
         $options = array_merge(self::$defaults, $options);
-
         $options = $this->fixJsonIssue($options);
-
         $response = $this->getHttpClient()->request($method, $url, $options);
         $response->getBody()->rewind();
         return $response->getBody()->getContents();

@@ -7,8 +7,6 @@ use GuzzleHttp\Exception\GuzzleException;
 use Lmh\OpenPaySDK\Request\BaseRequest;
 use Lmh\OpenPaySDK\Response\BaseResponse;
 use Nette\Utils\Random;
-use RandomLib\Factory;
-use SecurityLib\Strength;
 
 /**
  * Created by PhpStorm.
@@ -46,14 +44,26 @@ class Client
      * @var bool
      */
     public $sandbox;
+    /**
+     * @var array
+     * @see 参考 https://docs.guzzlephp.org/en/stable/request-options.html#proxy
+     * 'proxy' => [
+     * 'http'  => 'tcp://localhost:8125', // Use this proxy with "http"
+     * 'https' => 'tcp://localhost:9124', // Use this proxy with "https",
+     * 'no' => ['.mit.edu', 'foo.com']    // Don't use a proxy with these
+     * ]
+     */
+    protected $options = [];
 
-
-    protected $request;
-
-    public function __construct()
+    /**
+     * Client constructor.
+     * @param array $options
+     */
+    public function __construct(array $options = [])
     {
-
-
+        if ($options) {
+            $this->options = array_merge($this->options, $options);
+        }
     }
 
     /**
@@ -76,7 +86,7 @@ class Client
         $sysParams["appId"] = $this->appId;
         $sysParams["version"] = $this->version;
         $sysParams["format"] = $this->format;
-        $sysParams["sign_type"] = $this->signType;
+        $sysParams["signType"] = $this->signType;
         $sysParams["method"] = $request->getMethod();
         $sysParams["nonce"] = Random::generate(16);;
 
@@ -85,9 +95,9 @@ class Client
 
         $querySigner = new Signer();
         $params['sign'] = $querySigner->sign($params, $this->appSecret);
-        $options = [
+        $options = array_merge($this->options, [
             'body' => json_encode($params),
-        ];
+        ]);
         $requestClient = new Request();
         $requestClient->baseUri = $this->gatewayUrl;
         $result = $requestClient->request('', "POST", $options);
