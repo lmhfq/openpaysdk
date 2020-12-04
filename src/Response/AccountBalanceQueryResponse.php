@@ -16,10 +16,6 @@ class AccountBalanceQueryResponse extends BaseResponse
     /**
      * @var string
      */
-    public $externalId;
-    /**
-     * @var string
-     */
     public $productCode;
     /**
      * @var int 可用余额

@@ -12,10 +12,6 @@ class MerchantChannelQueryResponse extends BaseResponse
     /**
      * @var string
      */
-    public $externalId;
-    /**
-     * @var string
-     */
     public $subAppId;
     /**
      * @var string
