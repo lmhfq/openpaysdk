@@ -41,7 +41,7 @@ class PaymentTradeUnifiedOrderRequest extends BaseRequest
     /**
      * @var string
      */
-    public $scene = 'JSAPI';
+    public $scene;
     /**
      * @var string 商品描述
      */

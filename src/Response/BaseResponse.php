@@ -35,7 +35,7 @@ class BaseResponse
      */
     public $resultMessage = 'SYSTEM_ERROR';
     /**
-     * @var array
+     * @var array 原生返回数据
      */
     public $data = [];
 

@@ -12,8 +12,5 @@ namespace Lmh\OpenPaySDK\Response;
 
 class PaymentTradeQueryResponse extends BaseResponse
 {
-    /**
-     * @var array
-     */
-    public $data = [];
+
 }
