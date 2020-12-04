@@ -22,8 +22,7 @@ class DefaultTest extends TestCase
     {
         $client = new Client([
             'proxy' => [
-                'http' => 'tcp://localhost:8125', // Use this proxy with "http"
-                'https' => 'tcp://localhost:9124', // Use this proxy with "https",
+              //  'http' => '0.0.0.0', // Use this proxy with "http"
             ]
         ]);
         $client->appId = '174008574995857408';
@@ -40,5 +39,6 @@ class DefaultTest extends TestCase
 
         $result = $client->execute($paymentProductListRequest, new PaymentTradeUnifiedOrderResponse());
 
+        var_dump($result);
     }
 }
