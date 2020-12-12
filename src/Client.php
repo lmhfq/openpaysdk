@@ -19,7 +19,7 @@ class Client
     /**
      * @var string 网关
      */
-    public $gatewayUrl = "http://payment.xls.com/gateway";
+    public $gatewayUrl = "https://pay.wyawds.com/gateway";
 
     /**
      * @var string
