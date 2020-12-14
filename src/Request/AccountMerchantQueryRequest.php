@@ -15,7 +15,11 @@ class AccountMerchantQueryRequest extends BaseRequest
      */
     public $productCode;
     /**
-     * @var int
+     * @var int 账户状态 1 开启 0 关闭
      */
     public $status;
+    /**
+     * @var int 审核状态： 1 审核中 2 审核成功 3 审核失败
+     */
+    public $examineStatus;
 }
