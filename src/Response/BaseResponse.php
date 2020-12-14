@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Lmh\OpenPaySDK\Response;
 
 use ReflectionClass;
+use ReflectionException;
 use ReflectionProperty;
 
 /**
@@ -40,8 +41,9 @@ class BaseResponse
     public $data = [];
 
     /**
+     *
      * @param $values
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function setAttributes($values)
     {
@@ -57,7 +59,7 @@ class BaseResponse
 
     /**
      * @return array
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function attributes()
     {

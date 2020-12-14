@@ -9,8 +9,6 @@ declare(strict_types=1);
 
 namespace Lmh\OpenPaySDK;
 
-
-use EasyWeChat\Kernel\Support\XML;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
@@ -19,7 +17,7 @@ use Psr\Http\Message\ResponseInterface;
 class Request
 {
     /**
-     * @var \GuzzleHttp\ClientInterface
+     * @var ClientInterface
      */
     protected $httpClient;
     /**

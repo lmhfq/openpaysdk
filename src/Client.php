@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use Lmh\OpenPaySDK\Request\BaseRequest;
 use Lmh\OpenPaySDK\Response\BaseResponse;
 use Nette\Utils\Random;
+use ReflectionException;
 
 /**
  * Created by PhpStorm.
@@ -96,7 +97,7 @@ class Client
      * @param BaseResponse $response
      * @return BaseResponse
      * @throws GuzzleException
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function execute(BaseRequest $request, BaseResponse $response): BaseResponse
     {
