@@ -18,4 +18,12 @@ class ReconciliationBillListRequest extends BaseRequest
      * @var string
      */
     public $endTime;
+    /**
+     * @var int
+     */
+    public $page;
+    /**
+     * @var int
+     */
+    public $pageSize;
 }

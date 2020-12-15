@@ -13,4 +13,12 @@ namespace Lmh\OpenPaySDK\Request;
 class PaymentProductListRequest extends BaseRequest
 {
     protected $method = 'payment.product.list';
+    /**
+     * @var int
+     */
+    public $page;
+    /**
+     * @var int
+     */
+    public $pageSize;
 }

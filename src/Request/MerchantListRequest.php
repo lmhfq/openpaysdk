@@ -10,4 +10,12 @@ class MerchantListRequest extends BaseRequest
      * @var array
      */
     public $externalId;
+    /**
+     * @var int
+     */
+    public $page;
+    /**
+     * @var int
+     */
+    public $pageSize;
 }

@@ -18,4 +18,12 @@ class CpcnBankListRequest extends BaseRequest
      * @var int
      */
     public $cityId;
+    /**
+     * @var int
+     */
+    public $page;
+    /**
+     * @var int
+     */
+    public $pageSize;
 }
