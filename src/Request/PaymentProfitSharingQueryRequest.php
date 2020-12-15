@@ -22,4 +22,8 @@ class PaymentProfitSharingQueryRequest extends BaseRequest
      * @var string 分账流水号
      */
     public $sharingNo;
+    /**
+     * @var string 分账状态
+     */
+    public $status;
 }
