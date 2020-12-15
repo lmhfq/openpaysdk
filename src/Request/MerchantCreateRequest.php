@@ -14,6 +14,10 @@ class MerchantCreateRequest extends BaseRequest
 {
     protected $method = 'merchant.create';
     /**
+     * @var string 所属商户外部唯一ID
+     */
+    public $ancestorExternalId;
+    /**
      * @var int 1：个人  2 企业
      */
     public $merchantNature;
