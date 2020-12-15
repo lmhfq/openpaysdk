@@ -18,4 +18,12 @@ class AccountWithdrawListRequest extends BaseRequest
      * @var int
      */
     public $withdrawStatus;
+    /**
+     * @var int
+     */
+    public $page;
+    /**
+     * @var int
+     */
+    public $pageSize;
 }

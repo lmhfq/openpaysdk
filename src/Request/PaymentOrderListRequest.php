@@ -34,4 +34,12 @@ class PaymentOrderListRequest extends BaseRequest
      * @var string
      */
     public $totalAmountMax;
+    /**
+     * @var int
+     */
+    public $page;
+    /**
+     * @var int
+     */
+    public $pageSize;
 }

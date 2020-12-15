@@ -14,4 +14,12 @@ class AccountListRequest extends BaseRequest
      * @var int
      */
     public $examineStatus;
+    /**
+     * @var int
+     */
+    public $page;
+    /**
+     * @var int
+     */
+    public $pageSize;
 }
