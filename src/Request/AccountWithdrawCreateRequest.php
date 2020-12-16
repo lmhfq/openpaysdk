@@ -15,6 +15,10 @@ class AccountWithdrawCreateRequest extends BaseRequest
      */
     public $withdrawAccountId;
     /**
+     * @var string 外部提现单号
+     */
+    public $outTradeNo;
+    /**
      * @var int 提现金额
      */
     public $amount;
@@ -34,4 +38,12 @@ class AccountWithdrawCreateRequest extends BaseRequest
      * @var string 描述信息
      */
     public $description;
+    /**
+     * @var string 提现完成通知商户端地址
+     */
+    public $notifyUrl = '';
+    /**
+     * @var string 提现申请成功通知商户端地址
+     */
+    public $returnUrl = '';
 }
