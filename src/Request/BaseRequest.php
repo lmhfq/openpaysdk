@@ -47,7 +47,6 @@ class BaseRequest
      */
     public function toArray(): array
     {
-        $params = get_object_vars($this);
-        return array_filter($params);
+        return get_object_vars($this);
     }
 }
