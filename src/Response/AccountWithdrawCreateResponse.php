@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Lmh\OpenPaySDK\Request;
+namespace Lmh\OpenPaySDK\Response;
 
-class AccountWithdrawCreateResponse extends BaseRequest
+class AccountWithdrawCreateResponse extends BaseResponse
 {
     /**
      * @var  int
