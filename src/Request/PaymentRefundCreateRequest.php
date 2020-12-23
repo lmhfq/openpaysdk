@@ -12,6 +12,7 @@ namespace Lmh\OpenPaySDK\Request;
 
 class PaymentRefundCreateRequest extends BaseRequest
 {
+    protected $method = 'payment.refund.crate';
     /**
      * @var string 商户订单号
      */

@@ -12,6 +12,7 @@ namespace Lmh\OpenPaySDK\Request;
 
 class PaymentProfitSharingCreateRequest extends BaseRequest
 {
+    protected $method = 'payment.profit.sharing.create';
     /**
      * @var int
      */

@@ -12,6 +12,7 @@ namespace Lmh\OpenPaySDK\Request;
 
 class PaymentProfitSharingReceiverDeleteRequest extends BaseRequest
 {
+    protected $method = 'payment.profit.sharing.receiver.delete';
     /**
      * @var int
      */

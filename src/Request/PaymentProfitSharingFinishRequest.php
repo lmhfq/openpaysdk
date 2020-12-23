@@ -12,6 +12,7 @@ namespace Lmh\OpenPaySDK\Request;
 
 class PaymentProfitSharingFinishRequest extends BaseRequest
 {
+    protected $method = 'payment.profit.sharing.finish';
     /**
      * @var int
      */
