@@ -6,31 +6,31 @@ namespace Lmh\OpenPaySDK\Response;
 class AccountWithdrawCreateResponse extends BaseResponse
 {
     /**
-     * @var  int
+     * @var int
      */
     public $amount;
     /**
-     * @var  int
+     * @var int
      */
     public $realAmount;
     /**
-     * @var  string
+     * @var string
      */
     public $withdrawalType;
     /**
-     * @var  string
+     * @var string
      */
     public $tradeNo;
     /**
-     * @var  string
+     * @var string
      */
     public $bankName;
     /**
-     * @var  string
+     * @var string
      */
     public $bankCardNo;
     /**
-     * @var  string
+     * @var string
      */
     public $openBankName;
 }
