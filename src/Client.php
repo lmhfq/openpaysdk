@@ -20,8 +20,7 @@ class Client
     /**
      * @var string 网关
      */
-    public $gatewayUrl = "https://pay.wyawds.com/gateway";
-
+    public $gatewayUrl = "https://payment.wyawds.com/gateway";
     /**
      * @var string
      */
@@ -52,7 +51,7 @@ class Client
     public $timeout = 30;
     /**
      * @var array
-     * @see 参考 https://docs.guzzlephp.org/en/stable/request-options.html#proxy
+     * @see https://docs.guzzlephp.org/en/stable/request-options.html#proxy
      * 'proxy' => [
      * 'http'  => 'tcp://localhost:8125', // Use this proxy with "http"
      * 'https' => 'tcp://localhost:9124', // Use this proxy with "https",
@@ -66,14 +65,6 @@ class Client
     private $requestBody;
 
     /**
-     * @return string
-     */
-    public function getRequestBody(): string
-    {
-        return $this->requestBody;
-    }
-
-    /**
      * Client constructor.
      * @param array $options
      */
@@ -82,6 +73,14 @@ class Client
         if ($options) {
             $this->options = array_merge($this->options, $options);
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function getRequestBody(): string
+    {
+        return $this->requestBody;
     }
 
     /**

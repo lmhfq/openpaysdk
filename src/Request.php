@@ -17,17 +17,6 @@ use Psr\Http\Message\ResponseInterface;
 class Request
 {
     /**
-     * @var ClientInterface
-     */
-    protected $httpClient;
-    /**
-     * @var string
-     */
-    public $baseUri = '';
-
-
-    protected $config = [];
-    /**
      * @var array
      */
     protected static $defaults = [
@@ -35,6 +24,15 @@ class Request
             CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
         ],
     ];
+    /**
+     * @var string
+     */
+    public $baseUri = '';
+    /**
+     * @var ClientInterface
+     */
+    protected $httpClient;
+    protected $config = [];
 
     /**
      * Request constructor.
