@@ -46,6 +46,10 @@ class MerchantChannelCreateRequest extends BaseRequest
      */
     public $rate;
     /**
+     * @var int 通道状态
+     */
+    public $status;
+    /**
      * @var string
      */
     public $channelCode;
