@@ -14,4 +14,12 @@ class ReconciliationCapitalFlowQueryRequest extends BaseRequest
      * @var array
      */
     public $type;
+    /**
+     * @var int
+     */
+    public $endTime;
+    /**
+     * @var int
+     */
+    public $startTime;
 }

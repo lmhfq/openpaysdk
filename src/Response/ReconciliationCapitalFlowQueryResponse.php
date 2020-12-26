@@ -6,7 +6,11 @@ namespace Lmh\OpenPaySDK\Response;
 class ReconciliationCapitalFlowQueryResponse extends BaseResponse
 {
     /**
-     * @var int
+     * @var int 收入金额
      */
-    public $amount;
+    public $incomeAmount;
+    /**
+     * @var int 支出金额
+     */
+    public $expendAmount;
 }
