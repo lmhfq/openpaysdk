@@ -41,4 +41,12 @@ class MerchantChannelQueryResponse extends BaseResponse
      * @var string
      */
     public $status;
+    /**
+     * @var string
+     */
+    public $channelName;
+    /**
+     * @var string
+     */
+    public $productCode;
 }
