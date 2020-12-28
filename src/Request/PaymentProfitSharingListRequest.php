@@ -7,6 +7,14 @@ class PaymentProfitSharingListRequest extends BaseRequest
 {
     protected $method = 'payment.profit.sharing.list';
     /**
+     * @var string 分账接收者
+     */
+    public $receiverExternalId;
+    /**
+     * @var string 支付产品
+     */
+    public $productCode;
+    /**
      * @var string 商户订单号
      */
     public $outTradeNo;
