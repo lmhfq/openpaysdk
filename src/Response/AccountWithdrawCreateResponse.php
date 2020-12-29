@@ -33,4 +33,8 @@ class AccountWithdrawCreateResponse extends BaseResponse
      * @var string
      */
     public $openBankName;
+    /**
+     * @var string 预计到账时间
+     */
+    public $expectFinishTime;
 }
