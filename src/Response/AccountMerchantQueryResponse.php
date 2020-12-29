@@ -22,6 +22,10 @@ class AccountMerchantQueryResponse extends BaseResponse
      */
     public $merchantId;
     /**
+     * @var int
+     */
+    public $productId;
+    /**
      * @var  string
      */
     public $productCode;
