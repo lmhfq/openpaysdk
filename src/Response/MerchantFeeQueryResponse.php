@@ -57,4 +57,8 @@ class MerchantFeeQueryResponse extends BaseResponse
      * @var array
      */
     public $channel;
+    /**
+     * @var string 第三方账户名称自定义
+     */
+    public $customName;
 }

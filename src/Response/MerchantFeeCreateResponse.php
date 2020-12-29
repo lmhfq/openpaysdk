@@ -53,4 +53,8 @@ class MerchantFeeCreateResponse extends BaseResponse
      * @var int 提现手续费费承担方
      */
     public $withdrawFeeBear;
+    /**
+     * @var string 第三方账户名称自定义
+     */
+    public $customName;
 }
