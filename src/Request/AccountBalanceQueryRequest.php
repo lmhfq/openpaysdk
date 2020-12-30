@@ -10,4 +10,12 @@ class AccountBalanceQueryRequest extends BaseRequest
      * @var int
      */
     public $accountId;
+    /**
+     * @var int
+     */
+    public $productId;
+    /**
+     * @var string
+     */
+    public $productCode;
 }
