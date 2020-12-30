@@ -25,19 +25,14 @@ class BaseRequest
      */
     protected $method = '';
     /**
-     * @var array
-     */
-    protected $apiParams = [];
-
-    /**
      * 获取接口名称
      */
-    public function getMethod()
+    public function getMethod(): string
     {
         return $this->method;
     }
 
-    public function getApiParams()
+    public function getApiParams(): array
     {
         return $this->toArray();
     }
