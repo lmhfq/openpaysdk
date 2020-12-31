@@ -37,4 +37,20 @@ class MerchantChannelCreateResponse extends BaseResponse
      * @var string
      */
     public $status;
+    /**
+     * @var string
+     */
+    public $channelName;
+    /**
+     * @var string
+     */
+    public $productCode;
+    /**
+     * @var int 是否开启服务商
+     */
+    public $openPartner;
+    /**
+     * @var int 服务商Id
+     */
+    public $partnerId;
 }

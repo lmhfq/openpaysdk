@@ -64,4 +64,12 @@ class MerchantChannelCreateRequest extends BaseRequest
      * 12    WECHAT_SP_APP    微信APP(服务商)
      */
     public $channelCode;
+    /**
+     * @var int 是否开启服务商
+     */
+    public $openPartner;
+    /**
+     * @var int 服务商Id
+     */
+    public $partnerId;
 }
