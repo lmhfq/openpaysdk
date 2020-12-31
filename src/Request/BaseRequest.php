@@ -24,6 +24,7 @@ class BaseRequest
      * @var string 接口名称
      */
     protected $method = '';
+
     /**
      * 获取接口名称
      */
@@ -42,6 +43,9 @@ class BaseRequest
      */
     public function toArray(): array
     {
-        return get_object_vars($this);
+        $params = get_object_vars($this);
+        return array_filter($params, function ($v) {
+            return $v !== null;
+        });
     }
 }
