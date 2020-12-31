@@ -47,6 +47,10 @@ class MerchantFeeCreateRequest extends BaseRequest
      */
     public $payFeeBear;
     /**
+     * @var string 第三方账户名称自定义
+     */
+    public $customName;
+    /**
      * @var int 提现手续费费承担方
      */
     public $withdrawFeeBear;
