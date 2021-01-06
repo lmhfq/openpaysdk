@@ -5,7 +5,7 @@ namespace Lmh\OpenPaySDK\Request;
 
 class MerchantFeeQueryRequest extends BaseRequest
 {
-    protected $method = 'merchant.fee.create';
+    protected $method = 'merchant.fee.query';
     /**
      * @var int
      */
