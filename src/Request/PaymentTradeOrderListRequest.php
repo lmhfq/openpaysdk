@@ -11,7 +11,15 @@ class PaymentTradeOrderListRequest extends BaseRequest
      */
     public $outTradeNo;
     /**
+     * @var string 上级商户订单号
+     */
+    public $parentOutTradeNo;
+    /**
      * @var string
      */
     public $tradeNo;
+    /**
+     * @var int
+     */
+    public $tradeStatus;
 }
