@@ -57,11 +57,11 @@ class AccountCreateRequest extends BaseRequest
     /**
      * @var string  统一社会信用代码(公司必填)
      */
-    public $socialCreditCode;
+    public $businessLicenseNumber;
     /**
      * @var string 社会信用代码到期日期 Y-m-d
      */
-    public $socialCreditEndTime;
+    public $businessTime;
     /**
      * @var string 联系电话
      */

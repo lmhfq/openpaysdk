@@ -17,6 +17,10 @@ class MerchantCreateResponse extends BaseResponse
      */
     public $merchantId;
     /**
+     * @var string 所属商户
+     */
+    public $ancestorExternalId;
+    /**
      * @var int 1：个人  2 企业
      */
     public $merchantNature;
@@ -87,11 +91,19 @@ class MerchantCreateResponse extends BaseResponse
     /**
      * @var string 社会统一信用代码
      */
-    public $socialCreditCode;
+    public $businessLicenseNumber;
     /**
      * @var string 社会统一信用到期时间
      */
-    public $socialCreditEndTime;
+    public $businessTime;
+    /**
+     * @var string 组织机构代码
+     */
+    public $organizationNumber;
+    /**
+     * @var string 组织机构代码有效期限
+     */
+    public $organizationTime;
     /**
      * @var string 经办人姓名
      */

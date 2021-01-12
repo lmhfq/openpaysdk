@@ -88,11 +88,19 @@ class MerchantCreateRequest extends BaseRequest
     /**
      * @var string 社会统一信用代码
      */
-    public $socialCreditCode;
+    public $businessLicenseNumber;
     /**
      * @var string 社会统一信用到期时间
      */
-    public $socialCreditEndTime;
+    public $businessTime;
+    /**
+     * @var string 组织机构代码
+     */
+    public $organizationNumber;
+    /**
+     * @var string 组织机构代码有效期限
+     */
+    public $organizationTime;
     /**
      * @var string 经办人姓名
      */
