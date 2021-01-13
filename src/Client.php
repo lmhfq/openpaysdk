@@ -6,7 +6,6 @@ namespace Lmh\OpenPaySDK;
 use GuzzleHttp\Exception\GuzzleException;
 use Lmh\OpenPaySDK\Request\BaseRequest;
 use Lmh\OpenPaySDK\Response\BaseResponse;
-use Phalcon\Security\Random;
 use ReflectionException;
 
 /**
