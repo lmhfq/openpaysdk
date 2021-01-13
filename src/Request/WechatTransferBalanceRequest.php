@@ -12,6 +12,7 @@ namespace Lmh\OpenPaySDK\Request;
 
 class WechatTransferBalanceRequest extends BaseRequest
 {
+    protected $method = 'wechat.transfer.balance';
     /**
      * @var string 商户订单号
      */
