@@ -43,13 +43,13 @@ class PaymentTradeUnifiedOrderRequest extends BaseRequest
      */
     public $scene;
     /**
-     * @var string 商品描述
+     * @var string 商品描述 description
      */
     public $subject;
     /**
      * @var string 商品详情
      */
-    public $body;
+    public $detail;
     /**
      * @var string 附加数据
      */
