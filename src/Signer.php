@@ -30,7 +30,7 @@ class Signer
      * @param $key
      * @return string
      */
-    public function sign(array $params, $key)
+    public function sign(array $params, $key): string
     {
         unset($params['sign']);
         ksort($params);
