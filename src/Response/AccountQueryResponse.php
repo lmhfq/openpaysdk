@@ -97,4 +97,12 @@ class AccountQueryResponse extends BaseResponse
      * @var string 冻结金额
      */
     public $freezeBalance;
+    /**
+     * @var string
+     */
+    public $signUrl;
+    /**
+     * @var string
+     */
+    public $legalValidationUrl;
 }
