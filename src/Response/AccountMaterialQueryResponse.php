@@ -5,4 +5,8 @@ namespace Lmh\OpenPaySDK\Response;
 
 class AccountMaterialQueryResponse extends BaseResponse
 {
+    /**
+     * @var int
+     */
+    public $accountId;
 }
