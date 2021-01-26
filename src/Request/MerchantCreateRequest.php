@@ -26,13 +26,21 @@ class MerchantCreateRequest extends BaseRequest
      */
     public $merchantName;
     /**
-     * @var string 证件类型
+     * @var string 商户简称
+     */
+    public $merchantShortName;
+    /**
+     * @var int 证件类型
      */
     public $cardType;
     /**
      * @var string 证件号
      */
     public $cardNo;
+    /**
+     * @var string 证件名称
+     */
+    public $cardName;
     /**
      * @var string 证件有效期(起始时间)
      */
@@ -86,11 +94,11 @@ class MerchantCreateRequest extends BaseRequest
      */
     public $accountLicence;
     /**
-     * @var string 社会统一信用代码
+     * @var string 营业执照/登记证书信息
      */
     public $businessLicenseNumber;
     /**
-     * @var string 社会统一信用到期时间
+     * @var string 营业到期日期
      */
     public $businessTime;
     /**
@@ -100,17 +108,33 @@ class MerchantCreateRequest extends BaseRequest
     /**
      * @var string 组织机构代码有效期限
      */
-    public $organizationTime;
+    public $organizationStartTime;
     /**
-     * @var string 经办人姓名
+     * @var string 组织机构代码有效期限
+     */
+    public $organizationEndTime;
+    /**
+     * @var string 经办人（超级管理员）类型(65-经营者/法人 66-负责人)
+     */
+    public $operatorType;
+    /**
+     * @var string 经办人（超级管理员）姓名
      */
     public $operatorName;
     /**
-     * @var string 经办人身份证号
+     * @var string 经办人（超级管理员）身份证号
      */
     public $operatorCardNo;
     /**
-     * @var string 经办人手机号;
+     * @var string 经办人（超级管理员）手机号
      */
     public $operatorMobile;
+    /**
+     * @var string 补充说明
+     */
+    public $businessAdditionDesc;
+    /**
+     * @var array 店铺信息
+     */
+    public $storeInfo = [];
 }
