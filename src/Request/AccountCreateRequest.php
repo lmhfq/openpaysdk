@@ -23,6 +23,10 @@ class AccountCreateRequest extends BaseRequest
      */
     public $accountName;
     /**
+     * @var string 商户简称
+     */
+    public $merchantShortName;
+    /**
      * @var string 组织机构号
      */
     public $ptnCode;
@@ -35,13 +39,17 @@ class AccountCreateRequest extends BaseRequest
      */
     public $contactName;
     /**
-     * @var string  法定代表人/自然人 证件类型(详见数据字典) 目前只支持 A 身份证
+     * @var string  法定代表人/自然人 证件类型
      */
     public $cardType;
     /**
      * @var string 法定代表人/自然人 证件号码
      */
     public $cardNo;
+    /**
+     * @var string 身份证姓名
+     */
+    public $cardName;
     /**
      * @var string 法定代表人（企业必填）证件签发日期 Y-m-d
      */
@@ -51,10 +59,6 @@ class AccountCreateRequest extends BaseRequest
      */
     public $cardEndTime;
     /**
-     * @var int 是否三证合一 企业必须要三证合一
-     */
-    public $threeCertificates;
-    /**
      * @var string  统一社会信用代码(公司必填)
      */
     public $businessLicenseNumber;
@@ -62,6 +66,18 @@ class AccountCreateRequest extends BaseRequest
      * @var string 社会信用代码到期日期 Y-m-d
      */
     public $businessTime;
+    /**
+     * @var string 组织机构代码
+     */
+    public $organizationNumber;
+    /**
+     * @var string 组织机构代码有效期限 Y-m-d
+     */
+    public $organizationStartTime;
+    /**
+     * @var string 组织机构代码有效期限 Y-m-d(或'长期')
+     */
+    public $organizationEndTime;
     /**
      * @var string 联系电话
      */
@@ -71,15 +87,15 @@ class AccountCreateRequest extends BaseRequest
      */
     public $contactEmail;
     /**
-     * @var int 地址
+     * 地址
      */
     public $address;
     /**
-     * @var int 省份编码
+     * 省份编码
      */
     public $province;
     /**
-     * @var int 城市编码
+     * 城市编码
      */
     public $city;
     /**
@@ -103,6 +119,10 @@ class AccountCreateRequest extends BaseRequest
      */
     public $businessScope;
     /**
+     * @var string  法人类型(65-经营者/法人 66-负责人)
+     */
+    public $operatorType;
+    /**
      * @var string 经办人姓名
      */
     public $operatorName;
@@ -111,9 +131,17 @@ class AccountCreateRequest extends BaseRequest
      */
     public $operatorCardNo;
     /**
+     * @var string 经办人邮箱
+     */
+    public $operatorEmail;
+    /**
      * @var string 经办人手机号
      */
     public $operatorMobile;
+    /**
+     * @var string 补充说明
+     */
+    public $businessAdditionDesc;
     /**
      * @var array 绑卡信息
      */
@@ -121,7 +149,11 @@ class AccountCreateRequest extends BaseRequest
     /**
      * @var array 电子证件
      */
-    public $fileInfo;
+    public $fileInfo = [];
+    /**
+     * @var array 店铺信息
+     */
+    public $storeInfo = [];
     /**
      * @var string 通知商户服务器地址
      */
