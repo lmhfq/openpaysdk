@@ -39,9 +39,13 @@ interface TradeType
      */
     public const CPCN_ALIPAY = 'CPCN_ALIPAY';
     /**
-     * 微信支付(中金
+     * 微信支付(中金）
      */
     public const CPCN_WECHAT = 'CPCN_WECHAT';
+    /**
+     * 微信支付(电商平台)
+     */
+    public const WECHAT_EC = 'WECHAT_EC';
     /**
      * 暂不支持
      */

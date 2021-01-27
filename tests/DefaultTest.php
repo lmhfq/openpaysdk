@@ -7,11 +7,13 @@ use Lmh\OpenPaySDK\Client;
 use Lmh\OpenPaySDK\Constant\TradeType;
 use Lmh\OpenPaySDK\Request\AccountBalanceQueryRequest;
 use Lmh\OpenPaySDK\Request\AccountCreateRequest;
+use Lmh\OpenPaySDK\Request\MerchantFeeQueryRequest;
 use Lmh\OpenPaySDK\Request\PaymentChannelQueryRequest;
 use Lmh\OpenPaySDK\Request\PaymentProfitSharingReceiverAddRequest;
 use Lmh\OpenPaySDK\Request\PaymentProfitSharingReceiverDeleteRequest;
 use Lmh\OpenPaySDK\Request\PaymentTradeUnifiedOrderRequest;
 use Lmh\OpenPaySDK\Response\AccountBalanceQueryResponse;
+use Lmh\OpenPaySDK\Response\BaseResponse;
 use Lmh\OpenPaySDK\Response\PaymentChannelQueryResponse;
 use Lmh\OpenPaySDK\Response\PaymentProfitSharingReceiverAddResponse;
 use Lmh\OpenPaySDK\Response\PaymentTradeUnifiedOrderResponse;
@@ -40,24 +42,23 @@ class DefaultTest extends TestCase
         $client->gatewayUrl = 'https://payment.wyawds.com/gateway';
         $client->appSecret = "}ovFff+t'Q}%~aK5zUIOx.3F?#R[b!*]";
         $client->timeout = 30;
+//
+//        $paymentProductListRequest = new PaymentChannelQueryRequest();
+//        $paymentProductListRequest->externalId = "1698";
+//        $paymentProductListRequest->channelCode = "WECHAT";
+//
+//
+//        $paymentProductListRequest = new PaymentTradeUnifiedOrderRequest();
+//        $paymentProductListRequest->externalId = "1698";
+//        $paymentProductListRequest->outTradeNo = "" . time();
+//        $paymentProductListRequest->buyerId = '16996';
+//        $paymentProductListRequest->tradeType = TradeType::WECHAT;
+//        $paymentProductListRequest->totalAmount = 100;
+//        $paymentProductListRequest->openid = 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o';
+//        $paymentProductListRequest->profitSharing = 'Y';
 
-        $paymentProductListRequest = new PaymentChannelQueryRequest();
-        $paymentProductListRequest->externalId = "1698";
-        $paymentProductListRequest->channelCode = "WECHAT";
-
-
-        $paymentProductListRequest = new PaymentTradeUnifiedOrderRequest();
-        $paymentProductListRequest->externalId = "1698";
-        $paymentProductListRequest->outTradeNo = "" . time();
-        $paymentProductListRequest->buyerId = '16996';
-        $paymentProductListRequest->tradeType = TradeType::WECHAT;
-        $paymentProductListRequest->totalAmount = 100;
-        $paymentProductListRequest->openid = 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o';
-        $paymentProductListRequest->profitSharing = 'Y';
-
-        $paymentProductListRequest = new AccountBalanceQueryRequest();
-       $paymentProductListRequest->productCode = "CPCN";
-        $paymentProductListRequest->externalId = "1698";
+        $paymentProductListRequest = new MerchantFeeQueryRequest();
+        $paymentProductListRequest->externalId = "1699";
      //   $paymentProductListRequest->receivers=[
 //            [
 //                'type'=>'MERCHANT_ID',
@@ -75,7 +76,7 @@ class DefaultTest extends TestCase
 //        $paymentProductListRequest = new AccountCreateRequest();
 //        $paymentProductListRequest->externalId = "100037";
 
-        $result = $client->execute($paymentProductListRequest, new AccountBalanceQueryResponse());
+        $result = $client->execute($paymentProductListRequest, new BaseResponse());
 
         var_dump($result);
     }
