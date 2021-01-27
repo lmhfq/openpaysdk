@@ -20,10 +20,6 @@ class BaseResponse
      */
     public $externalId;
     /**
-     * @var string 签名
-     */
-    public $sign;
-    /**
      * @var bool
      */
     public $success = false;
