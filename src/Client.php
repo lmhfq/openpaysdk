@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Lmh\OpenPaySDK;
 
+use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use Lmh\OpenPaySDK\Request\BaseRequest;
 use Lmh\OpenPaySDK\Response\BaseResponse;
@@ -104,8 +105,10 @@ class Client
         $sysParams["format"] = $this->format;
         $sysParams["signType"] = $this->signType;
         $sysParams["method"] = $request->getMethod();
-        $sysParams["nonce"] = self::random();
-
+        try {
+            $sysParams["nonce"] = self::random();
+        } catch (Exception $e) {
+        }
         $apiParams = $request->getApiParams();
         $params = array_merge($sysParams, $apiParams);
 
@@ -136,19 +139,19 @@ class Client
      * Generates a random string of given length from characters specified in second argument.
      * Supports intervals, such as `0-9` or `A-Z`.
      * @param int $length
-     * @param string $charlist
+     * @param string $charList
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
-    public static function random(int $length = 16, string $charlist = '0-9a-z'): string
+    public static function random(int $length = 16, string $charList = '0-9a-z'): string
     {
-        $charlist = count_chars(preg_replace_callback('#.-.#', function (array $m): string {
+        $charList = count_chars(preg_replace_callback('#.-.#', function (array $m): string {
             return implode('', range($m[0][0], $m[0][2]));
-        }, $charlist), 3);
-        $chLen = strlen($charlist);
+        }, $charList), 3);
+        $chLen = strlen($charList);
         $res = '';
         for ($i = 0; $i < $length; $i++) {
-            $res .= $charlist[random_int(0, $chLen - 1)];
+            $res .= $charList[random_int(0, $chLen - 1)];
         }
         return $res;
     }

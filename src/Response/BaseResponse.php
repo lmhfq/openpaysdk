@@ -55,9 +55,8 @@ class BaseResponse
 
     /**
      * @return array
-     * @throws ReflectionException
      */
-    public function attributes()
+    public function attributes(): array
     {
         $class = new ReflectionClass($this);
         $names = [];
