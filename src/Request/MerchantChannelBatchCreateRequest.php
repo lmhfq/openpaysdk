@@ -12,6 +12,7 @@ namespace Lmh\OpenPaySDK\Request;
 
 class MerchantChannelBatchCreateRequest extends BaseRequest
 {
+    protected $method = 'merchant.channel.batch.create';
     /**
      * @var array 商家支付通道
      */
