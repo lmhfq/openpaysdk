@@ -35,6 +35,10 @@ class AccountCapitalListRequest extends BaseRequest
      */
     public $productCode;
     /**
+     * @var string
+     */
+    public $sortOrder;
+    /**
      * @var int
      */
     public $page;
