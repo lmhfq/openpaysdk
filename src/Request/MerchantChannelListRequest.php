@@ -13,4 +13,8 @@ namespace Lmh\OpenPaySDK\Request;
 class MerchantChannelListRequest extends BaseRequest
 {
     protected $method = 'merchant.channel.list';
+    /**
+     * @var integer
+     */
+    public $validateExamineStatus;
 }

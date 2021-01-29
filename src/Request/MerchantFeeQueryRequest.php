@@ -14,4 +14,8 @@ class MerchantFeeQueryRequest extends BaseRequest
      * @var string
      */
     public $externalId;
+    /**
+     * @var integer
+     */
+    public $validateExamineStatus;
 }
