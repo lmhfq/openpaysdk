@@ -21,6 +21,10 @@ class ReconciliationBillListRequest extends BaseRequest
     /**
      * @var int
      */
+    public $id;
+    /**
+     * @var int
+     */
     public $page;
     /**
      * @var int
