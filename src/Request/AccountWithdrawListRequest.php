@@ -15,6 +15,10 @@ class AccountWithdrawListRequest extends BaseRequest
      */
     public $createdTimeEnd;
     /**
+     * @var string
+     */
+    public $createdTimeSort;
+    /**
      * @var int
      */
     public $withdrawStatus;
