@@ -10,4 +10,8 @@ class ReconciliationSharingQueryRequest extends BaseRequest
      * @var int
      */
     public $status;
+    /**
+     * @var string
+     */
+    public $receiverExternalId;
 }
