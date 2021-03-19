@@ -10,4 +10,8 @@ class AccountBankcardDeleteRequest extends BaseRequest
      * @var int
      */
     public $accountId;
+    /**
+     * @var string
+     */
+    public $productCode;
 }
