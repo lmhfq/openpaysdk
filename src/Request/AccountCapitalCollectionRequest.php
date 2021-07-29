@@ -21,7 +21,7 @@ class AccountCapitalCollectionRequest extends BaseRequest
     /**
      * @var int 归集金额
      */
-    public $amount;
+    public $totalAmount;
     /**
      * @var string 描述信息
      */
