@@ -31,7 +31,6 @@ class DefaultTest extends TestCase
 //            ]
         ]);
         $client->appId = '174008574995857408';
-        $client->gatewayUrl = 'https://payment.wyawds.com/gateway';
         $client->appSecret = "}ovFff+t'Q}%~aK5zUIOx.3F?#R[b!*]";
         $client->timeout = 30;
 
