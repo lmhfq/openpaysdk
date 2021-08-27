@@ -17,6 +17,10 @@ class PaymentTradeOrderListRequest extends BaseRequest
     /**
      * @var string
      */
+    public $platformTradeNo;
+    /**
+     * @var string
+     */
     public $tradeNo;
     /**
      * @var int
