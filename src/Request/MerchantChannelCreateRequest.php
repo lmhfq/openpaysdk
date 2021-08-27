@@ -38,6 +38,18 @@ class MerchantChannelCreateRequest extends BaseRequest
      */
     public $certPath;
     /**
+     * @var string
+     */
+    public $certContent;
+    /**
+     * @var string
+     */
+    public $keyContent;
+    /**
+     * @var string
+     */
+    public $platformCertContent;
+    /**
      * @var int
      */
     public $channelId;
