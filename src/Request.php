@@ -52,10 +52,10 @@ class Request
      * @param string $url
      * @param string $method
      * @param array $options
-     * @return ResponseInterface
+     * @return string
      * @throws GuzzleException
      */
-    public function request(string $url, $method = 'POST', $options = []): string
+    public function request(string $url, string $method = 'POST', array $options = []): string
     {
         $method = strtoupper($method);
         $options = array_merge(self::$defaults, $options);
