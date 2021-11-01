@@ -78,4 +78,8 @@ class PaymentTradeUnifiedOrderRequest extends BaseRequest
      * @var string 终端IP
      */
     public $spbillCreateIp;
+    /**
+     * @var array 快捷支付交易数据
+     */
+    public $tradeData;
 }
