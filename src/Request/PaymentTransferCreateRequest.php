@@ -34,6 +34,10 @@ class PaymentTransferCreateRequest extends BaseRequest
      */
     public $accountName;
     /**
+     * @var string 收款用户证件号
+     */
+    public $cardNo;
+    /**
      * @var int
      */
     public $totalAmount;
