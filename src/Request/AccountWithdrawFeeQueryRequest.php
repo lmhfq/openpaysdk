@@ -19,10 +19,6 @@ class AccountWithdrawFeeQueryRequest extends BaseRequest
      */
     public $amount;
     /**
-     * @var int 商家手续费
-     */
-    public $merchantFee;
-    /**
      * @var int
      */
     public $productId;
