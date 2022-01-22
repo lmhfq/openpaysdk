@@ -105,13 +105,13 @@ class Client
         $sysParams["format"] = $this->format;
         $sysParams["signType"] = $this->signType;
         $sysParams["method"] = $request->getMethod();
+        $sysParams["timestamp"] = time();
         try {
             $sysParams["nonce"] = self::random();
         } catch (Exception $e) {
         }
         $apiParams = $request->getApiParams();
         $params = array_merge($sysParams, $apiParams);
-
         $params['sign'] = (new Signer())->sign($params, $this->appSecret);
 
         $this->requestBody = json_encode($params);
