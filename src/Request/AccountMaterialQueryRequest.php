@@ -1,9 +1,0 @@
-<?php
-declare(strict_types=1);
-
-namespace Lmh\OpenPaySDK\Request;
-
-class AccountMaterialQueryRequest extends BaseRequest
-{
-    protected $method = 'account.material.query';
-}

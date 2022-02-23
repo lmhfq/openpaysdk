@@ -62,4 +62,12 @@ class PaymentProductModifyRequest extends BaseRequest
      * @var array 系统支付通道
      */
     public $channel;
+    /**
+     * @var string 自定义产品名称
+     */
+    public $customName;
+    /**
+     * @var string 产品描述
+     */
+    public $description;
 }
