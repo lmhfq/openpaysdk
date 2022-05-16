@@ -63,6 +63,10 @@ class AccountCreateRequest extends BaseRequest
      */
     public $businessLicenseNumber;
     /**
+     * @var string 社会信用代码开始日期 Y-m-d
+     */
+    public $businessStartTime;
+    /**
      * @var string 社会信用代码到期日期 Y-m-d
      */
     public $businessTime;
@@ -130,6 +134,14 @@ class AccountCreateRequest extends BaseRequest
      * @var string 经办人证件号码
      */
     public $operatorCardNo;
+    /**
+     * @var string 经办人（企业必填）证件签发日期 Y-m-d
+     */
+    public $operatorCardStartTime;
+    /**
+     * @var string 经办人 证件到期日期，若长期有效 请填写 2099-12-31
+     */
+    public $operatorCardEndTime;
     /**
      * @var string 经办人邮箱
      */
