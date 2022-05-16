@@ -79,7 +79,7 @@ class AccountCreateRequest extends BaseRequest
      */
     public $organizationStartTime;
     /**
-     * @var string 组织机构代码有效期限 Y-m-d(或'长期')
+     * @var string 组织机构代码有效期限 Y-m-d
      */
     public $organizationEndTime;
     /**
