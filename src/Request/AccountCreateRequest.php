@@ -105,7 +105,7 @@ class AccountCreateRequest extends BaseRequest
     /**
      * @var string 行业编码
      */
-    public $industryId;
+    public $industryCode;
     /**
      * @var string 企业规模
      */
