@@ -24,7 +24,7 @@ class PaymentTransferCreateRequest extends BaseRequest
     /**
      * @var string
      */
-    public $openid;
+    public $userId;
     /**
      * @var string 校验用户姓名选项 NO_CHECK：不校验真实姓名, FORCE_CHECK：强校验真实姓名
      */
