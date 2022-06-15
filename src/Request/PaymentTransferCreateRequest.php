@@ -61,4 +61,8 @@ class PaymentTransferCreateRequest extends BaseRequest
      * @var string 收款人银行卡地区
      */
     public $city;
+    /**
+     * @var string
+     */
+    public $notifyUrl;
 }
