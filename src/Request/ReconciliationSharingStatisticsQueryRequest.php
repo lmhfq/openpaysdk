@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Lmh\OpenPaySDK\Request;
 
-class ReconciliationSharingQueryRequest extends BaseRequest
+class ReconciliationSharingStatisticsQueryRequest extends BaseRequest
 {
-    protected $method = 'reconciliation.sharing.query';
+    protected $method = 'reconciliation.sharing.statistics.query';
     /**
      * @var int
      */

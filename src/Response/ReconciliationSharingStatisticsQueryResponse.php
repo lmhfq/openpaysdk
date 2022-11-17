@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Lmh\OpenPaySDK\Response;
 
-class ReconciliationSharingQueryResponse extends BaseResponse
+class ReconciliationSharingStatisticsQueryResponse extends BaseResponse
 {
     /**
      * @var int

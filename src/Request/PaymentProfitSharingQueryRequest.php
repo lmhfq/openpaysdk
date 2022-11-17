@@ -7,6 +7,14 @@ class PaymentProfitSharingQueryRequest extends BaseRequest
 {
     protected $method = 'payment.profit.sharing.query';
     /**
+     * @var int 入驻商家ID
+     */
+    public $merchantId;
+    /**
+     * @var string 入驻外部唯一ID
+     */
+    public $externalId;
+    /**
      * @var string 商户订单号
      */
     public $outTradeNo;
